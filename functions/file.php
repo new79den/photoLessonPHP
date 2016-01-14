@@ -9,7 +9,7 @@ function file_upload($field){
 	
 	if (is_uploaded_file($_FILES[$field]['tmp_name'])){
 		$res = move_uploaded_file($_FILES[$field]['tmp_name'], 
-															__DIR__ . '/../img/' . $_FILES[$field]['name']);
+		__DIR__ . '/../img/' . $_FILES[$field]['name']);
 	
 		if(!$res){
 			return false;
